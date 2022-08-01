@@ -1,0 +1,23 @@
+<form #registrationForm="ngForm" (onsubmit)="register(registrationForm)">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="firstname" name="firstname">
+    <label>Email</label>
+    <input type="email" [(ngModel)]="email" name="email">
+    <label>Password</label>
+    <input type="password" [(ngModel)]="password" name="password">
+    <label>Phone Number</label>
+    <input type="number" [(ngModel)]="phonenumber" name="phonenumber">
+    <label>Profession</label>
+    <select [(ngModel)]="Profession" name="profession">
+        <option value="Lawyer">Lawyer</option>
+        <option value="Banker">Banker</option>
+        <option value="Doctor">Doctor</option>
+        <option value="Engineer">Engineer</option>
+
+    </select>
+</form>
+<button type="submit" (click)="register(registrationForm)" >Create Account</button>
+
+<p>{{firstname}}</p>
+<p>{{userdetail?.firstname}}</p>
+<!-- <p>{{userdetail.email}}</p> -->

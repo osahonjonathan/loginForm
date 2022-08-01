@@ -1,0 +1,11 @@
+<form #userlogin="ngForm" (onsubmit)="login(userlogin)">
+    <label>Username</label>
+    <input type="text" [(ngModel)]="username" name="username">
+    <label>password</label>
+    
+    <input type="password" [(ngModel)]="password" name="password">
+   
+    
+</form>
+<button type="submit" (click)="login(userlogin)" >Login</button>
+<div *ngIf="error">Invalid Credential</div>
